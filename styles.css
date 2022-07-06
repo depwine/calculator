@@ -16,7 +16,9 @@
     display:flex;
     flex-direction: row;
     justify-content: right;
-    padding: 20px;
+    height: 100px;
+    padding: 0 10px 0 0;
+    align-items: center;
     margin: 15px 25px 10px 25px;
 }
 
@@ -55,16 +57,15 @@
 }
 
 #zero{
-    width: 50%;
-    flex-grow: 3;
+    width: 102px;
 }
 
 #period{
-    flex-grow: 1/3;
+    width: 25%;
 }
 
 #equal{
-    flex-grow: 1/3;
+    width: 25%;
 }
 
 .button{
@@ -76,6 +77,16 @@
     width: 50px;
     justify-content: center;
     align-items: center;
+    
+}
+
+.button:hover{
+    background-color: rgb(82, 21, 122);
+}
+
+.button:active{
+    background-color: rgb(250, 242, 255);
+
 }
 
 .oper{
@@ -87,4 +98,13 @@
         width: 50px;
         justify-content: center;
         align-items: center;
+}
+
+.oper:hover{
+    background-color: rgb(220, 132, 255);
+
+}
+
+.oper:active{
+    background-color: rgb(250, 242, 255);
 }
