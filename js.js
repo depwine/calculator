@@ -224,6 +224,9 @@ clearButton.addEventListener(`click`, function (e){
 
 })
 
+/* not used, never got around to it
+
+
 const percentButton = document.querySelector("#percent");
 percentButton.addEventListener(`click`, (e) =>{
     console.log("percent button pressed");
@@ -233,6 +236,7 @@ const posnegButton = document.querySelector("#posNeg");
 posnegButton.addEventListener(`click`, (e) => {
     console.log("pos neg button pressed");
 })
+*/
 
 //0-9, period 
 
