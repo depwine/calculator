@@ -40,25 +40,36 @@ const operate = function (param, a, b){
         case "addCase":
             total = add(a,b);
             console.log("add total: "+total);
+            total = Math.round(total * 100) / 100;
+            display = total;
+            showDisplay.innerHTML = display;
             return total;
             break;
 
         case "subtractCase":
             total = subtract(a,b);
             console.log("subtract total: "+total);
+            total = Math.round(total * 100) / 100;
+            display = total;
+            showDisplay.innerHTML = display;
             return total;
             break;
 
         case "multiplyCase":
             total = multiply(a,b);
             console.log("multiply total: "+total);
-
+            total = Math.round(total * 100) / 100;
+            display = total;
+            showDisplay.innerHTML = display;
             return total;
             break;
 
         case "divideCase":
             total = divide(a,b);
             console.log("divide total: "+total);
+            total = Math.round(total * 100) / 100;
+            display = total;
+            showDisplay.innerHTML = display;
             return total;
             break;
 
@@ -73,31 +84,40 @@ const operate = function (param, a, b){
 const addButton = document.querySelector("#add");
 addButton.addEventListener(`click`, function(e){
 //    console.log("add button pressed");
-    param = "add";
+    param = "addCase";
+    console.log("param =  "+param);
+
 })
 
 const subtractButton = document.querySelector("#subtract");
 subtractButton.addEventListener(`click`, function(e){
     //console.log("subtract button pressed");
-    param = "subtract";
+    param = "subtractCase";
+    console.log("param =  "+param);
 })
 
 const multiplyButton = document.querySelector("#multiply");
 multiplyButton.addEventListener(`click`, function(e){
    // console.log("multiply button pressed");
-    param = "multiply";
+    param = "multiplyCase";
+    console.log("param =  "+param);
 })
 
 const divideButton = document.querySelector("#divide");
 divideButton.addEventListener(`click`, function(e){
     //console.log("divide button pressed");
-    param = "divide";
+    param = "divideCase";
+    console.log("param =  "+param);
 })
 
 const equalButton = document.querySelector("#equal");
 equalButton.addEventListener(`click`, function(e){
     //console.log("equal button pressed");
     operate(param, a, b);
+    console.log("param =  "+param);
+    console.log("a =  "+a);
+    console.log("b =  "+b);
+    
 })
 
 const clearButton = document.querySelector("#clear");
@@ -108,7 +128,7 @@ clearButton.addEventListener(`click`, function (e){
     //clear all values and variables
     aArray = [];
     bArray = [];
-    param;
+    param = null;
     a = 0;
     b = 0;
     display = 0;
@@ -145,6 +165,7 @@ oneButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -152,12 +173,25 @@ oneButton.addEventListener(`click`, (e) => {
 
 
 
-    } else {
+    } else if (param !== null){
 
-        /* untested
+        
         bArray.push(1);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
     
@@ -171,30 +205,49 @@ twoButton.addEventListener(`click`, (e) => {
     if (param == null){
 
         aArray.push(2);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
 
-    } else {
 
-        /* untested
+    } else if (param !== null){
+
+        
         bArray.push(2);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const threeButton = document.querySelector("#three");
@@ -203,29 +256,49 @@ threeButton.addEventListener(`click`, (e) => {
     if (param == null){
 
         aArray.push(3);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(3);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const fourButton = document.querySelector("#four");
@@ -234,29 +307,49 @@ fourButton.addEventListener(`click`, (e) => {
     if (param == null){
 
         aArray.push(4);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(4);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const fiveButton = document.querySelector("#five");
@@ -265,89 +358,148 @@ fiveButton.addEventListener(`click`, (e) => {
     if (param == null){
 
         aArray.push(5);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
-            console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(5);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
-})
+    
 
+    showDisplay.innerHTML = display;
+})
 const sixButton = document.querySelector("#six");
 sixButton.addEventListener(`click`, (e) => {
 
     if (param == null){
 
         aArray.push(6);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(6);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const sevenButton = document.querySelector("#seven");
 sevenButton.addEventListener(`click`, (e) => {
+
     if (param == null){
 
         aArray.push(7);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(7);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
+
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const eightButton = document.querySelector("#eight");
@@ -356,29 +508,49 @@ eightButton.addEventListener(`click`, (e) => {
     if (param == null){
 
         aArray.push(8);
-        a = aArray.join("");
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
+
+    } else if (param !== null){
+
+        
         bArray.push(8);
-        display = bArray.join("");
-        */
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    
+
+    showDisplay.innerHTML = display;
 })
 
 const nineButton = document.querySelector("#nine");
@@ -386,30 +558,48 @@ nineButton.addEventListener(`click`, (e) => {
 
     if (param == null){
 
-        aArray.push(3);
-        a = aArray.join("");
+        aArray.push(9);
+
+        console.log(aArray);
 
         if (aArray.length > 5){
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
     
-        } else if(aArray.length <= 5) {
+        } else if (aArray.length <= 5) {
 
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
         }
 
-    } else {
 
-        /* untested
-        bArray.push(3);
-        display = bArray.join("");
-        */
+
+    } else if (param !== null){
+
+        
+        bArray.push(9);
+
+        if (bArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+    
+        } else if (bArray.length <= 5) {
+
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        }
+        
     }
 
+    showDisplay.innerHTML = display;
 })
 
 const zeroButton = document.querySelector("#zero");
@@ -421,10 +611,11 @@ zeroButton.addEventListener(`click`, (e) => {
             display = 0;
             showDisplay.innerHTML = display;
 
-        } else if (aArray.length > 0){
+        } else if (aArray.length > 0 && aArray.length <= 5){
 
             aArray.push(0);
             a = aArray.join("");
+            a = parseInt(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -432,22 +623,32 @@ zeroButton.addEventListener(`click`, (e) => {
             console.log("too long")
             display = "ERR";
             showDisplay.innerHTML = display;
-    
-        }  else if (aArray.length <= 5) {
-            a = aArray.join("");
-
         }
 
 
 
 
 
-    } else {
+    } else if (param !== 0){
 
-        /* untested
-        bArray.push(3);
-        display = bArray.join("");
-        */
+        if (bArray.length === 0){
+            display = 0;
+            showDisplay.innerHTML = display;
+
+        } else if (bArray.length > 0 && bArray.length <= 5){
+
+            bArray.push(0);
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+        } else if (aArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+        }
+
     }
 })
 
