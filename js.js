@@ -113,10 +113,24 @@ divideButton.addEventListener(`click`, function(e){
 const equalButton = document.querySelector("#equal");
 equalButton.addEventListener(`click`, function(e){
     //console.log("equal button pressed");
+
+    //return math for operator and 2 numbers
     operate(param, a, b);
+
+    //if user wants to perform additionals, set A to current total
+    //and reset bArray, set b to zero
+    a = display;
+    bArray = [];
+    b = 0;
+    
+    /* test
     console.log("param =  "+param);
     console.log("a =  "+a);
     console.log("b =  "+b);
+    console.log("display: "+display);
+    */
+    param = null;
+    //console.log(param);
     
 })
 

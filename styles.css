@@ -1,4 +1,5 @@
 #container{
+    margin: 30px auto;
     background-color: rgb(32, 6, 37);
     display:flex;
     flex-direction: column;    
@@ -59,7 +60,7 @@
 }
 
 #zero{
-    width: 102px;
+    width: 52%
 }
 
 #period{
