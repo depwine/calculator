@@ -253,7 +253,7 @@ oneButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -274,7 +274,7 @@ oneButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -304,7 +304,7 @@ twoButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -325,7 +325,7 @@ twoButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -355,7 +355,7 @@ threeButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -376,7 +376,7 @@ threeButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -406,7 +406,7 @@ fourButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -427,7 +427,7 @@ fourButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -456,7 +456,7 @@ fiveButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -476,7 +476,7 @@ fiveButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -505,7 +505,7 @@ sixButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -526,7 +526,7 @@ sixButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -556,7 +556,7 @@ sevenButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -577,7 +577,7 @@ sevenButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -607,7 +607,7 @@ eightButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -628,7 +628,7 @@ eightButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -658,7 +658,7 @@ nineButton.addEventListener(`click`, (e) => {
         } else if (aArray.length <= 5) {
 
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -679,7 +679,7 @@ nineButton.addEventListener(`click`, (e) => {
         } else if (bArray.length <= 5) {
 
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -703,7 +703,7 @@ zeroButton.addEventListener(`click`, (e) => {
 
             aArray.push(0);
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -727,7 +727,7 @@ zeroButton.addEventListener(`click`, (e) => {
 
             bArray.push(0);
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -742,6 +742,7 @@ zeroButton.addEventListener(`click`, (e) => {
 
 
 /* period button tweaks
+*/
 const periodButton = document.querySelector("#period");
 periodButton.addEventListener(`click`, (e) => {
     
@@ -755,7 +756,7 @@ periodButton.addEventListener(`click`, (e) => {
 
             aArray.push(".");
             a = aArray.join("");
-            a = parseInt(a);
+            a = parseFloat(a);
             display = a;
             showDisplay.innerHTML = display;
 
@@ -781,7 +782,7 @@ periodButton.addEventListener(`click`, (e) => {
 
             bArray.push(".");
             b = bArray.join("");
-            b = parseInt(b);
+            b = parseFloat(b);
             display = b;
             showDisplay.innerHTML = display;
 
@@ -802,7 +803,7 @@ periodButton.addEventListener(`click`, (e) => {
     }
 })
 
-*/
+
 
 
 
