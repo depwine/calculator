@@ -1,26 +1,31 @@
 //declare display #
 let display = 0;
 
-//add
+//hook up display
+const showDisplay = document.querySelector("#result");
+showDisplay.innerHTML = display;
+
+//add func
 const add = function(a, b){
     return a+b;
 }
 
-//subtract
+//subtract func
 const subtract = function(a, b){
     return a-b;
 }
 
-//multiply
+//multiply func
 const multiply = function (a,b){
     return a*b;
 }
 
-//divide
+//dividefunc
 const divide = function (a,b){
     return a/b;
 }
 
+//call oper func
 const operate = function (param, a, b){
 
     //reset total to zero
@@ -104,51 +109,71 @@ posnegButton.addEventListener(`click`, (e) => {
 const oneButton = document.querySelector("#one");
 oneButton.addEventListener(`click`, (e) => {
     console.log("one button pressed");
+    display = 1;
+    showDisplay.innerHTML = display;
 })
 
 const twoButton = document.querySelector("#two");
 twoButton.addEventListener(`click`, (e) => {
     console.log("two button pressed");
+    display = 2;
+    showDisplay.innerHTML = display;
 })
 
 const threeButton = document.querySelector("#three");
 threeButton.addEventListener(`click`, (e) => {
     console.log("three button pressed");
+    display = 3;
+    showDisplay.innerHTML = display;
 })
 
 const fourButton = document.querySelector("#four");
 fourButton.addEventListener(`click`, (e) => {
     console.log("four button pressed");
+    display = 4;
+    showDisplay.innerHTML = display;
 })
 
 const fiveButton = document.querySelector("#five");
 fiveButton.addEventListener(`click`, (e) => {
     console.log("five button pressed");
+    display = 5;
+    showDisplay.innerHTML = display;
 })
 
 const sixButton = document.querySelector("#six");
 sixButton.addEventListener(`click`, (e) => {
     console.log("six button pressed");
+    display = 6;
+    showDisplay.innerHTML = display;
 })
 
 const sevenButton = document.querySelector("#seven");
 sevenButton.addEventListener(`click`, (e) => {
     console.log("seven button pressed");
+    display = 7;
+    showDisplay.innerHTML = display;
 })
 
 const eightButton = document.querySelector("#eight");
 eightButton.addEventListener(`click`, (e) => {
     console.log("eight button pressed");
+    display = 8;
+    showDisplay.innerHTML = display;
 })
 
 const nineButton = document.querySelector("#nine");
 nineButton.addEventListener(`click`, (e) => {
     console.log("nine button pressed");    
+    display = 9;
+    showDisplay.innerHTML = display;
 })
 
 const zeroButton = document.querySelector("#zero");
 zeroButton.addEventListener(`click`, (e) => {
     console.log("zero button pressed");
+    display = 0;
+    showDisplay.innerHTML = display;
 })
 
 const periodButton = document.querySelector("#period");
