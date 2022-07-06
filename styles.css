@@ -92,6 +92,31 @@
 
 }
 
+#posNeg{
+    background-color: rgb(182, 7, 252);
+}
+
+#posNeg:hover{
+    background-color: rgb(182, 7, 252);
+}
+
+#posNeg:active{
+    background-color: rgb(182, 7, 252);
+
+}
+
+#percent{
+    background-color: rgb(182, 7, 252);
+}
+
+#percent:hover{
+    background-color: rgb(182, 7, 252);
+}
+
+#percent:active{
+    background-color: rgb(182, 7, 252);
+}
+
 .oper{
         color:aliceblue;
         display: flex;

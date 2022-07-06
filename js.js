@@ -30,6 +30,10 @@ const divide = function (a,b){
     return a/b;
 }
 
+const percent = function(a){
+    return 
+}   
+
 //call oper func
 const operate = function (param, a, b){
 
@@ -84,30 +88,100 @@ const operate = function (param, a, b){
 const addButton = document.querySelector("#add");
 addButton.addEventListener(`click`, function(e){
 //    console.log("add button pressed");
-    param = "addCase";
-    console.log("param =  "+param);
+
+
+//if its the first thing, assign param to operator
+//if it's the second one, 
+
+    if (param === null){
+        param = "addCase";
+    } else if (param !== null){
+
+        //do operation upon button press as though it's an equal
+        operate(param, a, b);
+
+        //set new param
+        param = "addCase";
+
+        //if user wants to perform additionals, set A to current total
+        //and reset bArray, set b to zero
+        a = display;
+        bArray = [];
+        b = 0;
+
+    }
+
 
 })
 
 const subtractButton = document.querySelector("#subtract");
 subtractButton.addEventListener(`click`, function(e){
     //console.log("subtract button pressed");
-    param = "subtractCase";
-    console.log("param =  "+param);
+
+    if (param === null){
+        param = "subtractCase";
+    } else if (param !== null){
+
+        //do operation upon button press as though it's an equal
+        operate(param, a, b);
+
+        //set new param
+        param = "subtractCase";
+
+        //if user wants to perform additionals, set A to current total
+        //and reset bArray, set b to zero
+        a = display;
+        bArray = [];
+        b = 0;
+
+    }
 })
 
 const multiplyButton = document.querySelector("#multiply");
 multiplyButton.addEventListener(`click`, function(e){
    // console.log("multiply button pressed");
+
+
+   if (param === null){
     param = "multiplyCase";
-    console.log("param =  "+param);
+} else if (param !== null){
+
+    //do operation upon button press as though it's an equal
+    operate(param, a, b);
+
+    //set new param
+    param = "multiplyCase";
+
+    //if user wants to perform additionals, set A to current total
+    //and reset bArray, set b to zero
+    a = display;
+    bArray = [];
+    b = 0;
+
+}
 })
+
 
 const divideButton = document.querySelector("#divide");
 divideButton.addEventListener(`click`, function(e){
-    //console.log("divide button pressed");
-    param = "divideCase";
-    console.log("param =  "+param);
+
+    if (param === null){
+        param = "divideCase";
+    } else if (param !== null){
+
+        //do operation upon button press as though it's an equal
+        operate(param, a, b);
+
+        //set new param
+        param = "divideCase";
+
+        //if user wants to perform additionals, set A to current total
+        //and reset bArray, set b to zero
+        a = display;
+        bArray = [];
+        b = 0;
+
+    }
 })
 
 const equalButton = document.querySelector("#equal");
@@ -666,11 +740,69 @@ zeroButton.addEventListener(`click`, (e) => {
     }
 })
 
+
+/* period button tweaks
 const periodButton = document.querySelector("#period");
 periodButton.addEventListener(`click`, (e) => {
-    console.log("period button pressed");
+    
+    if (param == null){
+
+        if (aArray.length === 0){
+            display = 0;
+            showDisplay.innerHTML = display;
+
+        } else if (aArray.length > 0 && aArray.length <= 5){
+
+            aArray.push(".");
+            a = aArray.join("");
+            a = parseInt(a);
+            display = a;
+            showDisplay.innerHTML = display;
+
+            const disablePeriod = function(){
+                document.querySelector("#period").disabled = true;
+            }
+
+            disablePeriod();
+
+        } else if (aArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+        } 
+
+    } else if (param !== 0){
+
+        if (bArray.length === 0){
+            display = 0;
+            showDisplay.innerHTML = display;
+
+        } else if (bArray.length > 0 && bArray.length <= 5){
+
+            bArray.push(".");
+            b = bArray.join("");
+            b = parseInt(b);
+            display = b;
+            showDisplay.innerHTML = display;
+
+            const disablePeriod = function(){
+                document.querySelector("#period").disabled = true;
+            }
+
+            disablePeriod();
+
+        } else if (aArray.length > 5){
+            console.log("too long")
+            display = "ERR";
+            showDisplay.innerHTML = display;
+        }
+
+        
+    
+    }
 })
 
+*/
 
 
 
