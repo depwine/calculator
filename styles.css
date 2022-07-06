@@ -1,3 +1,7 @@
+body{
+    background-color: aliceblue;
+}
+
 #container{
     margin: 30px auto;
     background-color: rgb(32, 6, 37);
